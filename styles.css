@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Fasthand&family=Koh+Santepheap:wght@100;300;400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fasthand&display=swap");
+:root {
+  --gold-accent: #c2b280;
+  --soft-gray: #f8f8f8;
+}
+html {
+  scroll-behavior: smooth;
+}
+.box-animate {
+  opacity: 0;
+  transform: translateY(40px) scale(0.9);
+  transition: all 1s ease;
+}
+
+.box-animate.show {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px) scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #f3f4f6;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+.app-container {
+  width: 100%;
+  max-width: 450px;
+  background: white;
+  min-height: 100vh;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow-x: hidden;
+}
+.hero {
+  height: 60vh;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url("https://images.unsplash.com/photo-1583939003579-730e3918a45a?q=80&w=1974&auto=format&fit=crop");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 40px;
+  color: white;
+  text-align: center;
+}
+.cursive {
+  font-family: "Dancing Script", cursive;
+}
+
+.countdown-circle {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  background-color: var(--gold-accent);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.countdown-label {
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-top: -2px;
+  font-family: "Koh Santepheap", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.scroll-indicator {
+  position: absolute;
+  bottom: 20px;
+  animation: bounce 2s infinite;
+}
+.fasthand-regular {
+  font-family: "Fasthand", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.koh-santepheap-thin-font {
+  font-family: "Koh Santepheap", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px) scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
