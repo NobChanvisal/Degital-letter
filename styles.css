@@ -46,7 +46,7 @@ body {
   overflow-x: hidden;
 }
 .hero {
-  height: 60vh;
+  height: 100vh;
   background:
     linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
     url("https://images.unsplash.com/photo-1583939003579-730e3918a45a?q=80&w=1974&auto=format&fit=crop");
@@ -56,7 +56,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  padding-top: 40px;
+  padding-top: 30%;
   color: white;
   text-align: center;
 }
