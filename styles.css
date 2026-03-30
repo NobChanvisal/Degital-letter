@@ -1,12 +1,34 @@
 @import url("https://fonts.googleapis.com/css2?family=Fasthand&family=Koh+Santepheap:wght@100;300;400;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Fasthand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Moul&display=swap");
 :root {
   --gold-accent: #c2b280;
   --soft-gray: #f8f8f8;
 }
+@font-face {
+  font-family: kh-kbach;
+  src: url("./font/Kh\ Ang\ Komutt\ A.ttf");
+}
+.font-kh-kbach{
+  font-family: kh-kbach;
+}
 html {
   scroll-behavior: smooth;
 }
+.hero {
+  height: 100vh;
+  background: url("./image/background.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  padding-top: 20%;
+  color: white;
+  text-align: center;
+}
+
 .box-animate {
   opacity: 0;
   transform: translateY(40px) scale(0.9);
@@ -17,15 +39,67 @@ html {
   opacity: 1;
   transform: translateY(0) scale(1);
 }
+.fade-right-animate {
+  animation-name: fadeRight;
+  animation-duration: 2s;
+}
+.fade-left-animate {
+  animation-name: fadeLeft;
+  animation-duration: 2s;
+}
+.zoom-up-animate {
+  animation-name: zoomUp;
+  animation-duration: 1s;
+}
+
+.fade-up-animate {
+  animation: fadeUp 1s;
+}
+
+.fade-down-animate {
+  animation: fadeDown 1s;
+}
 
 @keyframes fadeUp {
   from {
-    opacity: 0;
-    transform: translateY(40px) scale(0.5);
+    transform: translateY(100px);
   }
   to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeDown {
+  from {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
     opacity: 1;
-    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes fadeRight {
+  from {
+    transform: translateX(300px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes fadeLeft {
+  from {
+    transform: translateX(-300px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
   }
 }
 
@@ -45,19 +119,7 @@ body {
   position: relative;
   overflow-x: hidden;
 }
-.hero {
-  height: 100vh;
-  background: url("./image/background.jpg");
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  padding-top: 30%;
-  color: white;
-  text-align: center;
-}
+
 .cursive {
   font-family: "Dancing Script", cursive;
 }
@@ -99,6 +161,11 @@ body {
   font-weight: 400;
   font-style: normal;
 }
+.moul-regular {
+  font-family: "Moul", serif;
+  font-weight: 400;
+  font-style: normal;
+}
 
 @keyframes bounce {
   0%,
@@ -116,7 +183,7 @@ body {
   }
 }
 
-@keyframes fadeUp {
+@keyframes zoomUp {
   from {
     opacity: 0;
     transform: translateY(40px) scale(0.5);
